@@ -11,7 +11,7 @@ class FormUpload extends Component
 {
     use WithFileUploads;
 
-    public string $email;
+    public string $name;
 
     public array $files = [];
 
@@ -49,7 +49,7 @@ class FormUpload extends Component
     public function rules()
     {
         return [
-            'email' => 'required|email',
+            'name' => 'required|string',
             'files' => 'required|array',
             'files.*' => 'required|file|max:1024',
         ];
