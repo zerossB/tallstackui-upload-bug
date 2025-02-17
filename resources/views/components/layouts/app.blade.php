@@ -6,9 +6,10 @@
 
         <title>{{ $title ?? config('app.name') }}</title>
 
+        <tallstackui:script /> 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body>
+    <body class="font-sans antialiased">
         {{ $slot }}
     </body>
 </html>
